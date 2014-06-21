@@ -1,0 +1,34 @@
+
+R version 3.0.3 (2014-03-06) -- "Warm Puppy"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.1.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(httr)
+> 
+> oauth_endpoints("github")
+<oauth_endpoint>
+ authorize: https://github.com/login/oauth/authorize
+ access:    https://github.com/login/oauth/access_token
+> 
+> app <- oauth_app("github", "32b2c195f41d1caeac8e")
+Warning message:
+Couldn't find secret in environment variable GITHUB_CONSUMER_SECRET 
+> token <- oauth2.0_token(oauth_endpoints("github"), app)
+Error in authorizer(authorize_url) : 
+  httpuv package required to capture OAuth credentials.
+Calls: oauth2.0_token ... <Anonymous> -> <Anonymous> -> init_oauth2.0 -> authorizer
+Execution halted
