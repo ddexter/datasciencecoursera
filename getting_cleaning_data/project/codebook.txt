@@ -1,0 +1,4 @@
+A description of each function can be found in features_info.txt
+
+A list of columns and their corresponding values for the new tidy data set
+is given in features.txt
