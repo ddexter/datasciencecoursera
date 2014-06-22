@@ -6,3 +6,6 @@ The file contains several helper methods for extracting and combining the test a
 
 ## Averaging Extracted Data
 The data frame described in the previous section contains many rows with duplicate (subject, activity) readings.   This part of the project asks us to average each mean() and std() measurement for each unique group of (subject, activity) pairs.  We use R's aggregate function to group by subject and activity and then apply the mean function to each group, resulting in a data frame that has one row for each unique (subject, activity) pair.  Every additional column represents the average of all values in the matching column's group.
+
+## Updating the Code Books
+Finally, the code books are updated to reflect that only the mean and std. dev. are extracted.  I have also added a few lines to the codebook explaining that the new data set reports the average of each column of mean() and std() samples
