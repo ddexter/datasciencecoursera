@@ -1,3 +1,4 @@
+library("gdata")
 library("hash")
 
 TOP_DIR <- "UCI\ HAR\ Dataset"
@@ -81,5 +82,5 @@ averaged_data <- aggregate(data[, 3:ncol(data)], by=list(data[ ,1], data[ ,2]), 
 new_col_names = c(ID_PAIR, sapply(feature_column_names, function(s) paste("mean", s)))
 colnames(averaged_data) <- new_col_names
 
-write.fwf(averaged_data, OUT_FILE, quote=FALSE, sep=" ", row.names=FALSE)
+write.fwf(averaged_data, OUT_FILE, quote=FALSE, sep="\t", rownames=FALSE)
 
